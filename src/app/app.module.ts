@@ -7,7 +7,7 @@ import { View1Component } from './view1/view1.component';
 import { View2Component } from './view2/view2.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent, pathMatch: 'full' },
+  { path: '', redirectTo: 'view1', pathMatch: 'full' },
   { path: 'view1', component: View1Component, data: { animation: 'View1' } },
   { path: 'view2', component: View2Component, data: { animation: 'View2' } },
 ];
