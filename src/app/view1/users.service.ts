@@ -10,23 +10,24 @@ export class UsersService {
         id: 123,
         name: 'User user',
         age: 23,
-        description: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         avatar: 'https://picsum.photos/50',
       },
       {
         id: 123,
         name: 'User user',
         age: 23,
-        description: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         avatar: 'https://picsum.photos/50',
       },
       {
         id: 123,
         name: 'User user',
         age: 23,
-        description: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         avatar: 'https://picsum.photos/50',
       },
-    ]).pipe(delay(1500));
+    ]);
+    // .pipe(delay(1500));
   }
 }
