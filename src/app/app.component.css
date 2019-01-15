@@ -1,0 +1,11 @@
+:host {
+  padding: 50px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid grey;
+  overflow: hidden;
+  height: 500px;
+}
