@@ -35,7 +35,7 @@ export const animation = trigger('routeAnimations', [
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   animations: [animation],
 })
 export class AppComponent {

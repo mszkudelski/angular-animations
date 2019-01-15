@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-view1',
   templateUrl: './view1.component.html',
-  styleUrls: ['./view1.component.css'],
+  styleUrls: ['./view1.component.scss'],
   providers: [UsersService],
 })
 export class View1Component {

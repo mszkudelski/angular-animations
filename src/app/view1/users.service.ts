@@ -27,7 +27,6 @@ export class UsersService {
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         avatar: 'https://picsum.photos/50',
       },
-    ]);
-    // .pipe(delay(1500));
+    ]).pipe(delay(500));
   }
 }

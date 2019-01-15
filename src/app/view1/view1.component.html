@@ -1,17 +1,21 @@
 <div class="container">
-  <div class="user" *ngFor="let user of (users | async)">
-    <img class="img" [src]="user.avatar" alt="" />
-    <div class="info">
-      <span>Name: {{ user.name }}</span> <span>Age: {{ user.age }}</span>
+  <ng-container *ngIf="(users | async) as users; else ghosts">
+    <div class="user" *ngFor="let user of users">
+      <img class="img" [src]="user.avatar" alt="" />
+      <div class="info">
+        <span>Name: {{ user.name }}</span> <span>Age: {{ user.age }}</span>
+      </div>
+      <span class="description">{{ user.description }}</span>
     </div>
-    <span class="description">{{ user.description }}</span>
-  </div>
-  <div class="user" *ngFor="let user of [0, 0, 0]">
-    <div class="user--ghost">
-      <img class="img" src="assets/empty-avatar.png" alt="" />
-      <div class="info--ghost"><span></span> <span></span></div>
-      <span class="description--ghost"></span>
-      <span class="description--ghost"></span>
+  </ng-container>
+  <ng-template #ghosts>
+    <div class="user" *ngFor="let user of [0, 0, 0]">
+      <div class="user--ghost">
+        <img class="img" src="assets/empty-avatar.png" alt="" />
+        <div class="info--ghost"><span></span> <span></span></div>
+        <span class="description--ghost"></span>
+        <span class="description--ghost"></span>
+      </div>
     </div>
-  </div>
+  </ng-template>
 </div>
