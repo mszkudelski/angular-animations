@@ -1,5 +1,5 @@
 <div class="container">
-  <ng-container *ngIf="(users | async) as users; else ghosts">
+  <div *ngIf="(users | async) as users" [@fadeIn]="users.length">
     <div class="user" *ngFor="let user of users">
       <img class="img" [src]="user.avatar" alt="" />
       <div class="info">
@@ -7,9 +7,9 @@
       </div>
       <span class="description">{{ user.description }}</span>
     </div>
-  </ng-container>
-  <ng-template #ghosts>
-    <div class="user" *ngFor="let user of [0, 0, 0]">
+  </div>
+  <div [@fadeOut]="!ghostsArr.length" class="ghosts">
+    <div class="user" *ngFor="let user of ghostsArr">
       <div class="user--ghost">
         <img class="img" src="assets/empty-avatar.png" alt="" />
         <div class="info--ghost"><span></span> <span></span></div>
@@ -17,5 +17,6 @@
         <span class="description--ghost"></span>
       </div>
     </div>
-  </ng-template>
+  </div>
+  <button class="button" (click)="reload()">Reload</button>
 </div>
