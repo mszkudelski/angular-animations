@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, transition, animate, style } from '@angular/animations';
+import {
+  trigger,
+  transition,
+  animate,
+  style,
+  state,
+} from '@angular/animations';
 import { timer } from 'rxjs';
 
 @Component({
@@ -8,7 +14,11 @@ import { timer } from 'rxjs';
   styleUrls: ['./view2.component.scss'],
   animations: [
     trigger('move', [
-      transition('* => *', [
+      state('void', style({ transform: 'translateY(100px)' })),
+      transition(':enter', [
+        animate('1000ms ease-in-out', style({ transform: 'translateY(0)' })),
+      ]),
+      transition(':increment', [
         animate('500ms ease-in-out', style({ transform: 'translateX(50px)' })),
         animate('500ms ease-in-out', style({ transform: 'translateX(0)' })),
       ]),
