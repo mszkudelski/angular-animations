@@ -39,11 +39,5 @@ export const animation = trigger('routeAnimations', [
   animations: [animation],
 })
 export class AppComponent {
-  prepareRoute(outlet: RouterOutlet) {
-    return (
-      outlet &&
-      outlet.activatedRouteData &&
-      outlet.activatedRouteData['animation']
-    );
-  }
+  // TODO: prepareOutlet
 }
