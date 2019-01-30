@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   trigger,
   transition,
@@ -16,11 +16,11 @@ import { timer } from 'rxjs';
     trigger('move', [
       state('void', style({ transform: 'translateY(100px)' })),
       transition(':enter', [
-        animate('1000ms ease-in-out', style({ transform: 'translateY(0)' })),
+        animate('1000ms ease', style({ transform: 'translateY(0)' })),
       ]),
       transition(':increment', [
-        animate('500ms ease-in-out', style({ transform: 'translateX(50px)' })),
-        animate('500ms ease-in-out', style({ transform: 'translateX(0)' })),
+        animate('500ms ease', style({ transform: 'translateX(50px)' })),
+        animate('500ms ease', style({ transform: 'translateX(0)' })),
       ]),
     ]),
   ],
