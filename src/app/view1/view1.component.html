@@ -1,22 +1,3 @@
 <div class="container">
-  <div *ngIf="(users | async) as users" [@fadeIn]="users.length">
-    <div class="user" *ngFor="let user of users">
-      <img class="img" [src]="user.avatar" alt="" />
-      <div class="info">
-        <span>Name: {{ user.name }}</span> <span>Age: {{ user.age }}</span>
-      </div>
-      <span class="description">{{ user.description }}</span>
-    </div>
-  </div>
-  <div [@fadeOut]="!ghostsArr.length" class="ghosts">
-    <div class="user" *ngFor="let user of ghostsArr">
-      <div class="user--ghost">
-        <img class="img" src="assets/empty-avatar.png" alt="" />
-        <div class="info--ghost"><span></span> <span></span></div>
-        <span class="description--ghost"></span>
-        <span class="description--ghost"></span>
-      </div>
-    </div>
-  </div>
-  <button class="button" (click)="reload()">Reload</button>
+  view1
 </div>
