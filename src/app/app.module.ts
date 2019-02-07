@@ -8,8 +8,8 @@ import { View2Component } from './view2/view2.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'view2', pathMatch: 'full' },
-  { path: 'view1', component: View1Component, data: { animation: 'View1' } },
-  { path: 'view2', component: View2Component, data: { animation: 'View2' } },
+  { path: 'view1', component: View1Component },
+  { path: 'view2', component: View2Component },
 ];
 
 @NgModule({
